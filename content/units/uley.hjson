@@ -1,0 +1,77 @@
+type: payload
+name: Uley
+description: A flying spore artillery
+health: 420
+range: 300
+forceMultiTarget: true
+itemCapacity: 0
+armor: 3
+speed: 2.5
+accel: 0.06
+drag: 0.017
+lowAltitude: true
+flying: true
+engineOffset: 10.5
+faceTarget: true
+hitSize: 16.05
+engineSize: 3
+weapons: [
+  {
+    name: spore-weapon-mount
+    x: 8
+    y: -6
+    mirror: false
+    top: false
+    reload: 15
+    shootSound: lasershoot
+    rotate: true
+    bullet: {
+      type: LaserBoltBulletType
+      speed: 5.2
+      damage: 10
+      lifetime: 35
+      healPercent: 5
+      collidesTeam: true
+      backColor: 98ffa9
+      frontColor: ffffff
+    }
+  }
+  {
+    name: spore-artillery
+    reload: 65
+    mirror: false
+    x: 0
+    y: 1.5
+    rotateSpeed: 1.7
+    rotate: true
+    shootY: 7
+    shake: 2
+    recoil: 2
+    shadow: 12
+    inaccuracy: 3
+    ejectEffect: casing3
+    shootSound: artillery
+    bullet: {
+        type: ArtilleryBulletType
+        speed: 3.5
+        damage: 15
+        trailMult: 0.8
+        hitEffect: sapExplosion
+        knockback: 1.5
+        lifetime: 84
+        height: 14
+        width: 13
+        collidesTiles: true
+        splashDamageRadius: 40
+        splashDamage: 40
+        backColor: 6d56bf
+        frontColor: bf92f9
+        trailEffect: artilleryTrail
+        trailSize: 4
+        hitShake: 4
+        shootEffect: shootBig2
+        status: sporeSlowed
+        statusDuration: 10
+    }
+  }
+]

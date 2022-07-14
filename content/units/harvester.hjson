@@ -1,0 +1,14 @@
+type: legs
+name: Serp
+hitSize: 10
+description: Automatically mines titanium, copper and lead and delivers them to the core. Warning: can get stuck currently!
+speed: 0.50
+hovering: true
+health: 220
+range: 64
+itemCapacity: 100
+legCount: 6
+legLength: 10
+legBaseOffset: 0.5
+legExtension: 0.5
+legSpeed: 0.2

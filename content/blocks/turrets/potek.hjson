@@ -1,0 +1,4 @@
+name: Potok (legacy sprite)
+consumes: {
+	power:1.5
+}

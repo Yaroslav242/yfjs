@@ -1,0 +1,4 @@
+name: Potok
+consumes: {
+	power:1.5
+}
