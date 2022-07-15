@@ -1,5 +1,5 @@
 require("potok");
 require("potek");
-require("uley");
+require("spore-units");
 require("harvester");
 require("mod");
