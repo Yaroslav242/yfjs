@@ -7,6 +7,6 @@ Adds some stuff I made using JavaScript:
 'Uley' (Rus: beehive) - Spore-infected mega with a new artillery turret
 # Preview screenshots!!!
 <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview1.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview5.jpg" width="45%" >
-<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview3.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview7.jpg" width="45%" >
-<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview2.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview6.jpg" width="45%" >
+<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview6.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview7.jpg" width="45%" >
+<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview2.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview3.jpg" width="45%" >
 <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview4.jpg" width="45%" >
