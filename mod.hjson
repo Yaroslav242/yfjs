@@ -2,9 +2,10 @@ name: "YFJS"
 description:
   '''
     Adds some stuff I made using JavaScript:
-    'Potok' (Russian: flow) - An artillery cannon using electricity to shoot liquid capsules
-    'Serp' (Russian: sickle) - A spider unit that automatically mines titanium, lead and copper
+    'Potok' (Rus: flow) - Artillery cannon using electricity to shoot liquid capsules
+    'Serp' (Rus: sickle) - Spider unit that automatically mines titanium, lead and copper
+    'Uley' (Rus: beehive) - Spore-infected mega with a new artillery turret
   '''
 
 minGameVersion: 125
-version: 0.1.1
+version: 0.1.4

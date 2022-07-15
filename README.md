@@ -1,22 +1,12 @@
-# Warning: This is copied over from recompensator mod and I need to change this!!!
-
-# recompensator-mod
-Adds the recompensator, an electrically-powered liquid capsule launcher!
-# How to use
-The weapon is crafted with titanium, silicon, plastanium and metaglass
-
-First add a liquid for it to launch, then power it using electricity.
-
-Consumes two water extractors, and as much power as one. The guns do not extinguish fires automatically when supplied with water or cryo.
-
-Water has more splash area and has twice the consumption rate, slag does more splash damage, cryo slows units down and oil can be set on fire.
-# Preview pictures
-![Preview 1](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview1.jpg?raw=true)
-![Preview 2](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview2.jpg?raw=true)
-![Preview 3](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview3.jpg?raw=true)
-![Preview 4](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview4.jpg?raw=true)
-![Preview 5](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview5.jpg?raw=true)
-![Preview 6](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview6.jpg?raw=true)
-![Preview 7](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview7.jpg?raw=true)
-![Preview 8](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview8.jpg?raw=true)
-![Preview 9](https://github.com/Yaroslav242/recompensator-mod/blob/main/preview/preview9.jpg?raw=true)
+# [YFJS] - Yarik Found JavaScript
+This is a JavaScript Mindustry mod that was done using JavaScript. Did I mention I made it in JavaScript? It curently adds units and turrets but I will be adding various stuff to it that I think is cool. Whatever I can make in JavaScript goes here, the name kinda speaks for itself since I am using only JavaScript here!
+# In game description
+Adds some stuff I made using JavaScript:
+'Potok' (Rus: flow) - Artillery cannon using electricity to shoot liquid capsules
+'Serp' (Rus: sickle) - Spider unit that automatically mines titanium, lead and copper
+'Uley' (Rus: beehive) - Spore-infected mega with a new artillery turret
+# Preview screenshots!!!
+<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview1.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview5.jpg" width="45%" >
+<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview3.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview7.jpg" width="45%" >
+<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview2.jpg" width="45%" > <img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview6.jpg" width="45%" >
+<img src="https://raw.githubusercontent.com/Yaroslav242/yfjs/main/preview/preview4.jpg" width="45%" >
