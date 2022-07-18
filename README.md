@@ -4,8 +4,9 @@ This is a JavaScript Mindustry mod that was done using JavaScript. Did I mention
 Adds some stuff I made using JavaScript:
 <ul>
 <li>'Potok' (Rus: flow) - Artillery cannon using electricity to shoot liquid capsules</li>
-<li>'Serp' (Rus: sickle) - Spider unit that automatically mines titanium, lead and copper</li>
-<li>'Uley' (Rus: beehive) - Spore-infected mega with a new artillery turret</li>
+<li>'Serp' (Rus: sickle) - Spider unit that automatically mines titanium, lead and copper and defends with the mining laser</li>
+<li>'Uley' (Rus: beehive) - Spore-infested mega with a new artillery turret</li>
+<li>'Mycorisa' (Rus: mycoris) - Convers vanilla units to spore-infested units with completely different abilities</li>
 </ul>
 
 

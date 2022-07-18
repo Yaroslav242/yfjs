@@ -1,2 +1,15 @@
 name: Mycorisa
 description: Quickly converts vanilla units to their spore-infested counterparts with different abilities
+consumes: {
+	power:1.5
+  items: {
+    items: [
+      spore-pod/80
+      silicon/50
+    ]
+  }
+  liquid: {
+    liquid: water
+    amount: 0.1
+  }
+}

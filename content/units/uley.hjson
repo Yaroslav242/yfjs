@@ -70,7 +70,7 @@ weapons: [
         trailSize: 4
         hitShake: 4
         shootEffect: shootBig2
-        status: sporeSlowed
+        status: spore-slowed
         statusDuration: 10
     }
   }

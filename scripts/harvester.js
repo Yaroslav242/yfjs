@@ -1,70 +1,113 @@
-const healBullet = new ContinuousLaserBulletType(2);
+const miningLaser = extend(PointLaserBulletType, {
+  load() {
+    this.super$load();
 
-healBullet.length = 35;
+    this.laser = Core.atlas.find("minelaser");
+    this.laserEnd = Core.atlas.find("minelaser-end");
+  },
+  draw(b) {
 
-healBullet.width = 2;
-healBullet.drawSize = 70;
-healBullet.lifetime = 20;
-healBullet.smokeEffect = Fx.none;
+       var xd = b.aimX - b.x;
+       var yd = b.aimY - b.y;
+       var distance = Mathf.len(xd,yd);
+       var range = 100;
 
+       var hitX = b.aimX;
+       var hitY = b.aimY;
 
-healBullet.incendAmount = 0;
-healBullet.incendSpread = 0;
-healBullet.incendChance = 0;
+       if (distance > range) {
+         // Draw laser with limited distance
+         var hitX = b.x + xd * (range/distance);
+         var hitY = b.y + yd * (range/distance);
+       }
 
-healBullet.healPercent = 1;
-healBullet.collidesTeam = true;
-healBullet.lightColor = Color.lime;
-healBullet.colors = [Color.valueOf("73e60055"),
- Color.valueOf("73e600aa"),
- Color.valueOf("ccff66"),
- Color.white];
+       var bNew = b;
+       bNew.aimX = hitX;
+       bNew.aimY = hitY;
+       this.super$draw(bNew);
+   },
+   update(b) {
 
-const healBeam = new Weapon("Repair diode");
-healBeam.mirror = false;
-healBeam.top = false;
+      var xd = b.aimX - b.x;
+      var yd = b.aimY - b.y;
+      var distance = Mathf.len(xd,yd);
+      var range = 100;
 
-healBeam.shootY = 14;
-healBeam.x = 0;
-healBeam.y = 0;
+      var hitX = b.aimX;
+      var hitY = b.aimY;
 
-healBeam.parentizeEffects = true;
-healBeam.reload = 2.5;
-healBeam.shake = 0;
-healBeam.recoil = 0;
-healBeam.chargeSound = Sounds.lasercharge2;
-healBeam.shootSound = Sounds.sap;
-healBeam.continuous = true;
-healBeam.cooldownTime = 0;
+      if (distance > range) {
+        // Shoot laser bullet with limited distance
+        var hitX = b.x + xd * (range/distance);
+        var hitY = b.y + yd * (range/distance);
+      }
 
-healBeam.shootStatus = StatusEffects.slow;
-healBeam.shootStatusDuration = 10;
-healBeam.bullet = healBullet;
+      var bNew = b;
+      bNew.aimX = hitX;
+      bNew.aimY = hitY;
+      this.super$update(bNew);
+  },
+  beamEffectSize: 0,
+});
+
+miningLaser.damage = 10;
+miningLaser.hitColor = Color.valueOf("fda981");
+
+const miningWeapon = new Weapon("mining-weapon")
+
+miningWeapon.mirror = false;
+miningWeapon.top = false;
+
+miningWeapon.shootY = 3;
+miningWeapon.x = 0;
+miningWeapon.y = 0;
+
+miningWeapon.parentizeEffects = true;
+miningWeapon.reload = 0.01;
+miningWeapon.shake = 0;
+miningWeapon.recoil = 0;
+miningWeapon.chargeSound = Sounds.lasercharge2;
+miningWeapon.shootSound = Sounds.sap;
+miningWeapon.continuous = true;
+//miningWeapon.alwaysContinuous = true;
+miningWeapon.controllable = true;
+// miningWeapon.cooldownTime = 0;
+
+miningWeapon.shootStatus = StatusEffects.slow;
+miningWeapon.shootStatusDuration = 10;
+miningWeapon.bullet = miningLaser;
 
 
 // Create harvester unit type with overridden stats
-const harvester = extendContent(UnitType,"harvester", {
-  mineTier : 3,
-  mineSpeed : 3.5,
-  itemCapacity : 100
-  // Rest is defined in content/units/harvester.hjson
-})
-harvester.weapons.add(healBeam)
+const harvester = new UnitType("harvester");
+harvester.mineTier = 3;
+harvester.mineSpeed = 3.5;
+harvester.itemCapacity = 100;
+
+harvester.weapons.add(miningWeapon);
 
 // Make the constructor default dagger's
 harvester.constructor = () => LegsUnit.create();
 // Set MinerAI as defualt AI
-harvester.defaultController = (u) => {
-  const ai = extendContent(MinerAI, {
+
+harvester.controller = (u) => {
+  const ai = extend(MinerAI, {
     updateMovement() {
-      //this.unit.lookAt(this.unit.vel.angle());
-      this.faceTarget();
-      this.super$updateMovement();
-      //this.target = this.unit.closestCore();
+      if (this.invalid(this.target)) {
+        // True - ore targeted, stop shooting lasers
+        this.unit.controlWeapons(false);
+        this.super$updateMovement();
+      } else {
+        // False - enemy targeted, shoot laser at them
+        this.mining = false;
+        this.unit.controlWeapons(true);
+      }
+      this.faceTarget(); //  Look at whatever it is targeting
     }
   })
   return ai;
 };
+
 // Set ID as 70 so reloads do not lose the unit
 EntityMapping.idMap[70] = harvester.constructor;
 
